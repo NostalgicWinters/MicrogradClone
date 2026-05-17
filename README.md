@@ -1,33 +1,48 @@
-A clone of Micrograd built by me for learning about the internal working of neural nets while following Andrej Karpathy's educational content.
+# MicrogradClone
 
-### Micrograd
-A tiny Autograd engine. Implements backpropagation (reverse-mode autodiff) over a dynamically built DAG and a small neural networks library on top of it with a PyTorch-like API.
+A lightweight implementation of an autograd engine and neural network library built from scratch to understand computational graphs, backpropagation, and the core fundamentals of deep learning.
+
+## Overview
+
+MicrogradClone is an educational deep learning project inspired by Andrej Karpathy’s Micrograd. The project recreates a minimal automatic differentiation engine capable of building computational graphs and performing reverse-mode backpropagation.
+
+The goal of this project is to provide a hands-on understanding of how neural networks work internally without relying on large machine learning frameworks like PyTorch or TensorFlow.
 
 ## Features
-- Scalar-based automatic differentiation engine
-- Dynamic computation graph construction
+- Automatic differentiation engine (Autograd)
+- Computational graph construction
 - Reverse-mode backpropagation
-- PyTorch-like API
-- Simple neural network modules (MLP, Neuron, Layer)
-- Training with gradient descent
-- A draw_dot() function which lets you visualize your neural net
+- Scalar-based neural network implementation
+- Activation functions support
+- Minimal and beginner-friendly codebase
+- Educational implementation for learning deep learning fundamentals
+  
+## Concepts Covered
+- Neural Networks
+- Backpropagation
+- Gradient Descent
+- Computational Graphs
+- Chain Rule
+- Reverse-mode Automatic Differentiation
 
-## Motivation
-This project was built to deeply understand reverse-mode automatic differentiation and the internal mechanics of neural networks by implementing them from scratch, following Andrej Karpathy’s educational content.
-
-## Example Usage
-```python
-from micrograd import Value
-
-x = Value(2.0)
-y = Value(-3.0)
-z = x * y + x**2
-z.backward()
-
-print(x.grad, y.grad)
+## Project Structure
+```
+├── .ipynb_checkpoints/
+│   └── main-checkpoint.ipynb
+├── main.ipynb
+└── README.md
 ```
 
-## Acknowledgements
-This project is inspired by Andrej Karpathy’s Micrograd and his educational content.
-Original repository: https://github.com/karpathy/micrograd
+## Inspiration
+Inspired by:
+- Andrej Karpathy
+- Micrograd by Andrej Karpathy
 
+## Future Improvements
+- Tensor support
+- GPU acceleration
+- More activation functions
+- Optimizers (SGD, Adam)
+- Loss functions
+- Dataset training examples
+- Visualization tools for computational graphs
